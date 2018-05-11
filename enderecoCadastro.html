@@ -24,19 +24,25 @@
         </div>
       </nav>
     </header>
-
     <div class="jumbotron text-center">
-      <h1>Index</h1>
-      <p>Erabe!</p>
+      <h1>Endereço</h1>
+      <p>Cadastar!</p>
     </div>
 
     <div class="container">
-        <div class="list-group">
-        <a href="alunoLista.php" class="list-group-item list-group-item-action">Aluno</a>
-        <a href="professorLista.php" class="list-group-item list-group-item-action">Professor</a>
-        <a href="enderecoLista.php" class="list-group-item list-group-item-action">endereco</a>
-      </div>
+      <div class="form-check">
+      <form method="post" action="enderecoCadastro.php">
+       <input type="text" class="form-control" placeholder="rua" name="rua"><br>
+       <input type="text" class="form-control" placeholder="numero" name="numero"><br>
+       <input type="text" class="form-control" placeholder="bairro" name="bairro"><br>
+       <input type="text" class="form-control" placeholder="cidade" name="cidade"><br>
+       <input type="text" class="form-control" placeholder="cep" name="cep"><br>
+       <button type="submit" class="btn btn-primary">Cadastrar</button>
+     </form>
+     </div>
     </div>
+
+
 
   </body>
 </html>
