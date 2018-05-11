@@ -24,21 +24,45 @@
         </div>
       </nav>
     </header>
-
     <div class="jumbotron text-center">
-      <h1>Index</h1>
-      <p>Erabe!</p>
+      <h1>Bloco</h1>
+      <p>Listar</p>
     </div>
 
     <div class="container">
-        <div class="list-group">
-        <a href="alunoLista.php" class="list-group-item list-group-item-action">Aluno</a>
-        <a href="professorLista.php" class="list-group-item list-group-item-action">Professor</a>
-        <a href="enderecoLista.php" class="list-group-item list-group-item-action">endereco</a>
-        <a href="faculdadeLista.php" class="list-group-item list-group-item-action">faculdade</a>
-        <a href="salaLista.php" class="list-group-item list-group-item-action">sala</a>
-        <a href="blocoLista.php" class="list-group-item list-group-item-action">bloco</a>
-      </div>
+
+      <?php
+        include "conn.php";
+
+        $conn = conn();
+
+        $sql = "SELECT nome FROM bloco";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+           // output data of each row
+
+           echo "<table class='table'>
+           <thead>
+             <tr>
+               <th scope='col'>Nome</th>
+             </tr>
+           </thead>
+           <tbody>
+           ";
+         while($row = $result->fetch_assoc()) {
+           echo "<tr><td>" . $row["nome"]. "</td></tr>" ;
+         }
+         echo "
+           </tbody>
+         </table>";
+
+
+         } else {
+         echo "0 results";
+         }
+       ?>
+       <a class="btn btn-dark" href="blocoCadastro.html">Cadastrar</a>
     </div>
 
   </body>
