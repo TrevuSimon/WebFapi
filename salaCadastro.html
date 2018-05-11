@@ -24,21 +24,21 @@
         </div>
       </nav>
     </header>
-
     <div class="jumbotron text-center">
-      <h1>Index</h1>
-      <p>Erabe!</p>
+      <h1>Sala</h1>
+      <p>Cadastar!</p>
     </div>
 
     <div class="container">
-        <div class="list-group">
-        <a href="alunoLista.php" class="list-group-item list-group-item-action">Aluno</a>
-        <a href="professorLista.php" class="list-group-item list-group-item-action">Professor</a>
-        <a href="enderecoLista.php" class="list-group-item list-group-item-action">endereco</a>
-        <a href="faculdadeLista.php" class="list-group-item list-group-item-action">faculdade</a>
-        <a href="salaLista.php" class="list-group-item list-group-item-action">sala</a>
-      </div>
+      <div class="form-check">
+      <form method="post" action="salaCadastro.php">
+       <input type="text" class="form-control" placeholder="numero" name="numero"><br>
+       <button type="submit" class="btn btn-primary">Cadastrar</button>
+     </form>
+     </div>
     </div>
+
+
 
   </body>
 </html>
