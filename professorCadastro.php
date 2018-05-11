@@ -25,7 +25,7 @@
        </nav>
      </header>
      <div class="jumbotron text-center">
-       <a href="alunoLista.php"><h1>Aluno</h1></a>
+       <a href="professorLista.php"><h1>Professor</h1></a>
        <p>Listar</p>
      </div>
 
@@ -37,13 +37,10 @@
          $conn = conn();
 
          $nome = isset($_POST["nome"])?$_POST["nome"]:"";
-         $sobrenome = isset($_POST["sobrenome"])?$_POST["sobrenome"]:"";
-         $cpf = isset($_POST["cpf"])?$_POST["cpf"]:"";
-         $rg = isset($_POST["rg"])?$_POST["rg"]:"";
-         $telefone = isset($_POST["telefone"])?$_POST["telefone"]:"";
+         $matricula = isset($_POST["matricula"])?$_POST["matricula"]:"";
 
-         $sql = "INSERT into aluno (nome, sobrenome, rg, cpf, telefone)
-         VALUES('$nome','$sobrenome',$cpf,$rg,'$telefone')";
+         $sql = "INSERT into professor (nome, matricula)
+         VALUES('$nome',$matricula)";
 
          if ($conn->query($sql) === TRUE) {
               echo "Cadastrado com sucesso";

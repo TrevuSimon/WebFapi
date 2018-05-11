@@ -25,7 +25,7 @@
       </nav>
     </header>
     <div class="jumbotron text-center">
-      <h1>Aluno</h1>
+      <h1>Professor</h1>
       <p>Listar</p>
     </div>
 
@@ -36,7 +36,7 @@
 
         $conn = conn();
 
-        $sql = "SELECT nome, sobrenome, rg, cpf, telefone FROM aluno";
+        $sql = "SELECT matricula, nome FROM professor";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
@@ -46,20 +46,14 @@
            <thead>
              <tr>
                <th scope='col'>Nome</th>
-               <th scope='col'>Sobrenome</th>
-               <th scope='col'>cpf</th>
-               <th scope='col'>rg</th>
-               <th scope='col'>telefone</th>
+               <th scope='col'>Matricula</th>
              </tr>
            </thead>
            <tbody>
            ";
          while($row = $result->fetch_assoc()) {
            echo "<tr><td>" . $row["nome"]. "</td>".
-                "<td>". $row["sobrenome"]. "</td>".
-                "<td>". $row["cpf"]. "</td>".
-                "<td>". $row["rg"]. "</td>".
-                "<td>". $row["telefone"]. "</td></tr>" ;
+                "<td>". $row["matricula"]. "</td></tr>" ;
          }
          echo "
            </tbody>
@@ -70,7 +64,7 @@
          echo "0 results";
          }
        ?>
-       <a class="btn btn-dark" href="alunoCadastro.html">Cadastrar</a>
+       <a class="btn btn-dark" href="professorCadastro.html">Cadastrar</a>
     </div>
 
   </body>
