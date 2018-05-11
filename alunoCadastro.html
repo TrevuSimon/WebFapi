@@ -24,17 +24,25 @@
         </div>
       </nav>
     </header>
-
     <div class="jumbotron text-center">
-      <h1>Index</h1>
-      <p>Erabe!</p>
+      <h1>Aluno</h1>
+      <p>Cadastar!</p>
     </div>
 
     <div class="container">
-        <div class="list-group">
-        <a href="alunoLista.php" class="list-group-item list-group-item-action">Aluno</a>
-      </div>
+      <div class="form-check">
+      <form method="post" action="alunoCadastro.php">
+       <input type="text" class="form-control" placeholder="nome" name="nome"><br>
+       <input type="text" class="form-control" placeholder="sobrenome" name="sobrenome"><br>
+       <input type="text" class="form-control" placeholder="cpf" name="cpf"><br>
+       <input type="text" class="form-control" placeholder="rg" name="rg"><br>
+       <input type="text" class="form-control" placeholder="telefone" name="telefone"><br>
+       <button type="submit" class="btn btn-primary">Cadastrar</button>
+     </form>
+     </div>
     </div>
+
+
 
   </body>
 </html>
